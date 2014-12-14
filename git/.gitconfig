@@ -1,0 +1,11 @@
+[user]
+	email = guillaume.klein4@gmail.com
+	name = Guillaume Klein
+[core]
+	editor = emacs
+	autocrlf = false
+	filemode = false
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[push]
+	default = simple
