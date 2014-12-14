@@ -1,0 +1,40 @@
+Xft.autohint: 0
+Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.dpi: 96
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+URxvt.title: Terminal
+URxvt.termName: rxvt-unicode
+URxvt.perl-ext-common: default,tabbed,vtwheel,matcher
+URxvt.cursorBlink: true
+URxvt.font: xft:Monospace-10
+
+URxvt.depth: 32
+URxvt.background: [80]#000000
+
+URxvt.foreground: white
+
+*color0:  #2E3436
+*color1:  #a40000
+*color2:  #4E9A06
+*color3:  #C4A000
+*color4:  #3465A4
+*color5:  #75507B
+*color6:  #ce5c00
+*color7:  #babdb9
+*color8:  #555753
+*color9:  #EF2929
+*color10: #8AE234
+*color11: #FCE94F
+*color12: #729FCF
+*color13: #AD7FA8
+*color14: #fcaf3e
+*color15: #EEEEEC
+
+URxvt.scrollBar: false
+
+URxvt.urlLauncher: chromium
+URxvt.matcher.button: 1
