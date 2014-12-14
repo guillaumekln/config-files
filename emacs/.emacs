@@ -44,9 +44,13 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
+;; Auctex
+(load "auctex.el" nil t t)
+(load "preview-latex.el" nil t t)
+
 ;; Spell check in LaTeX
 (setq ispell-dictionary "francais")
-(add-hook 'latex-mode-hook 'flyspell-mode)
+(add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
 
 ;; Set up package repositories
 (require 'package)
