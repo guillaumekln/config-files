@@ -21,8 +21,6 @@ alias l='ll'
 alias ll='ls -l'
 alias la='ls -la'
 
-alias up='sudo yaourt -Syua'
-
 alias cl='clear'
 alias f='fg'
 
