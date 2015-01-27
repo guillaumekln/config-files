@@ -1,3 +1,4 @@
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;; Skip Emacs startup page
@@ -30,7 +31,7 @@
 
 ;; Higlight empty lines, tabs and extra spaces
 (require 'whitespace)
-(setq whitespace-style '(empty tabs trailing))
+(setq whitespace-style '(face empty tabs trailing))
 (global-whitespace-mode t)
 
 ;; Disable tab for indentation
