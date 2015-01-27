@@ -7,6 +7,9 @@
 
 PS1='[\u@\h \W]\$ '
 
+# Check the window size after each command
+shopt -s checkwinsize
+
 # Default application
 export PAGER='most'
 export EDITOR='emacs'
