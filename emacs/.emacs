@@ -1,4 +1,3 @@
-
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;; Skip Emacs startup page
@@ -58,3 +57,11 @@
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) ; Org-mode's repository
+
+;; CMake mode
+(require 'cmake-mode)
+(setq auto-mode-alist
+      (append
+       '(("CMakeLists\\.txt\\'" . cmake-mode))
+       '(("\\.cmake\\'" . cmake-mode))
+       auto-mode-alist))
