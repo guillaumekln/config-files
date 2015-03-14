@@ -8,7 +8,8 @@
 sh ~/.fehbg &
 
 # Apps
+udiskie -2 &
 compton --config ~/.config/compton/compton.conf -b &
 tint2 &
 (sleep 1 && volumeicon) &
-(sleep 3 && thunar --daemon) &
+(sleep 2 && thunar --daemon) &
