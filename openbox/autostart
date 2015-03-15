@@ -4,12 +4,7 @@
 # to run user-specific things.
 #
 
-# Wallpaper
 sh ~/.fehbg &
-
-# Apps
-udiskie -2 &
 compton --config ~/.config/compton/compton.conf -b &
 tint2 &
-(sleep 1 && volumeicon) &
-(sleep 2 && thunar --daemon) &
+volumeicon &

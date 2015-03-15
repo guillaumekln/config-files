@@ -1,0 +1,3 @@
+udiskie -2 &
+thunar --daemon &
+light-locker &

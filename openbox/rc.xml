@@ -332,7 +332,7 @@
     </keybind>
     <keybind key="C-A-l">
       <action name="Execute">
-        <command>slimlock</command>
+        <command>light-locker-command -l</command>
       </action>
     </keybind>
     <keybind key="C-A-t">
@@ -362,12 +362,12 @@
     </keybind>
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
-        <command>xbacklight -inc 10</command>
+        <command>xbacklight -inc 5</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
-        <command>xbacklight -dec 10</command>
+        <command>xbacklight -dec 5</command>
       </action>
     </keybind>
     <keybind key="Print">
