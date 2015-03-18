@@ -18,6 +18,7 @@ export PAGER='most'
 export EDITOR='emacs'
 
 export PATH=$PATH:~/bin
+export MZN_STDLIB_DIR=/home/guillaume/downloads/minizinc-2.0.1/share/minizinc/
 
 # Alias
 alias grep='grep --color=auto'
