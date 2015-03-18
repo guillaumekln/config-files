@@ -370,6 +370,11 @@
         <command>xbacklight -dec 5</command>
       </action>
     </keybind>
+    <keybind key="XF86Suspend">
+      <action name="Execute">
+        <command>systemctl suspend</command>
+      </action>
+    </keybind>
     <keybind key="Print">
       <action name="Execute">
         <command>sh -c "import -window root ~/images/Screenshots/`date '+%Y%m%d-%H%M%S'`.png"</command>
