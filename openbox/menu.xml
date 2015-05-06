@@ -49,6 +49,14 @@
   </menu>
 
   <menu id="apps-dev-menu" label="Development">
+    <item label="Eclipse">
+      <action name="Execute">
+        <command>eclipse</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
     <item label="Matlab">
       <action name="Execute">
         <command>matlab -desktop</command>
