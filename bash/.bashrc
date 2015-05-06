@@ -49,3 +49,6 @@ alias hibernate='systemctl hibernate'
 # Prefix-sensitive history
 # bind '"\e[A":history-search-backward'
 # bind '"\e[B":history-search-forward'
+
+# Fix NTFS colors with ls
+eval $(dircolors -b ~/.dir_colors)
