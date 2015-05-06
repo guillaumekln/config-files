@@ -65,7 +65,3 @@
        '(("CMakeLists\\.txt\\'" . cmake-mode))
        '(("\\.cmake\\'" . cmake-mode))
        auto-mode-alist))
-
-;; MiniZinc mode
-(require 'minizinc)
-(add-to-list 'auto-mode-alist '("\\.mzn\\'" . minizinc-mode))
