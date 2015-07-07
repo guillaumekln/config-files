@@ -8,6 +8,9 @@
 (menu-bar-mode -99)
 (scroll-bar-mode -1)
 
+;; Confirm with 'y' or 'n'
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 ;; IDO mode
 (ido-mode t)
 
