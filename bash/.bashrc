@@ -40,6 +40,8 @@ alias gitco='git commit -m'
 alias gitp='git push'
 alias gita='git add'
 
+alias json='python -m json.tool'
+
 # Power control
 alias suspend='systemctl suspend'
 alias reboot='systemctl reboot'
