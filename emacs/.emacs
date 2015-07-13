@@ -14,6 +14,11 @@
 ;; IDO mode
 (ido-mode t)
 
+;; SMEX (IDO for M-x")
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
 ;; Display line and column number
 (global-linum-mode 1)
 (column-number-mode 1)
