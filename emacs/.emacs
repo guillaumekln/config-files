@@ -11,6 +11,9 @@
 ;; Confirm with 'y' or 'n'
 (defalias 'yes-or-no-p 'y-or-n-p)
 
+;; BufferSelection
+(global-set-key (kbd "C-x C-b") 'bs-show)
+
 ;; IDO mode
 (ido-mode t)
 
