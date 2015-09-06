@@ -10,7 +10,7 @@ URxvt.title: Terminal
 URxvt.termName: rxvt-unicode
 URxvt.perl-ext-common: default,tabbed,vtwheel,matcher
 URxvt.cursorBlink: true
-URxvt.font: xft:Monospace-10
+URxvt.font: xft:Monospace-11
 
 URxvt.depth: 32
 URxvt.background: [80]#000000
