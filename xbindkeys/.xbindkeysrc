@@ -1,0 +1,24 @@
+# Backlight
+"xbacklight -inc 5"
+    XF86MonBrightnessUp
+
+"xbacklight -dec 5"
+    XF86MonBrightnessDown
+
+# Volume
+"amixer set Master toggle"
+    XF86AudioMute
+
+"amixer set Master 5%- unmute"
+    XF86AudioLowerVolume
+
+"amixer set Master 5%+ unmute"
+    XF86AudioRaiseVolume
+
+# Suspend
+"systemctl suspend"
+    XF86Suspend
+
+# Print screen
+"sh -c "import -window root ~/images/Screenshots/`date '+%Y%m%d-%H%M%S'`.png""
+    Print

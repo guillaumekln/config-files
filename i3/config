@@ -149,21 +149,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Screen brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
-
-# Sound control
-bindsym XF86AudioMute exec amixer set Master toggle
-bindsym XF86AudioLowerVolume exec amixer set Master 5%- unmute
-bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ unmute
-
-# Suspend
-bindsym XF86Suspend exec systemctl suspend
-
-# Print
-bindsym Print exec sh -c "import -window root ~/images/Screenshots/`date '+%Y%m%d-%H%M%S'`.png"
-
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
