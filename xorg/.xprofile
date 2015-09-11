@@ -1,2 +1,2 @@
-udiskie -2 &
+thunar --daemon &
 xbindkeys &
