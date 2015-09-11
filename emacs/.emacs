@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/.emacs.d/lisp")
+(package-initialize)
 
 ;; Skip Emacs startup page
 (custom-set-variables '(inhibit-startup-screen t))
@@ -65,26 +65,8 @@
 
 ;; Set up package repositories
 (require 'package)
-(add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) ; Org-mode's repository
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 
-;; CMake mode
-(require 'cmake-mode)
-(setq auto-mode-alist
-      (append
-       '(("CMakeLists\\.txt\\'" . cmake-mode))
-       '(("\\.cmake\\'" . cmake-mode))
-       auto-mode-alist))
-
-;; Rust mode
-(add-to-list 'load-path "~/.emacs.d/lisp/rust-mode/")
-(autoload 'rust-mode "rust-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
-
-;; Markdown mode
-(add-to-list 'load-path "~/.emacs.d/lisp/markdown-mode/")
-(autoload 'markdown-mode "markdown-mode" "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+;; Auto-complete
+(require 'auto-complete)
+(global-auto-complete-mode t)
