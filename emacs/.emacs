@@ -66,7 +66,3 @@
 ;; Set up package repositories
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-
-;; Auto-complete
-(require 'auto-complete)
-(global-auto-complete-mode t)
