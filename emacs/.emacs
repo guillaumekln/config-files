@@ -8,6 +8,9 @@
 (menu-bar-mode -99)
 (scroll-bar-mode -1)
 
+;; Load themes
+(load-theme 'zenburn t)
+
 ;; Confirm with 'y' or 'n'
 (defalias 'yes-or-no-p 'y-or-n-p)
 
