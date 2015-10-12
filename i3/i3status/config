@@ -43,6 +43,7 @@ tztime local {
 
 cpu_temperature 0 {
         format = "%degrees °C"
+        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon0/temp1_input"
 }
 
 disk "/" {
