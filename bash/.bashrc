@@ -17,8 +17,7 @@ shopt -s checkwinsize
 export PAGER='most'
 export EDITOR='emacs'
 
-export PATH=$PATH:~/bin
-export MZN_STDLIB_DIR=/home/guillaume/downloads/minizinc-2.0.1/share/minizinc/
+export PATH=$PATH:~/bin:~/.gem/ruby/2.2.0/bin
 
 # Alias
 alias grep='grep --color=auto'
@@ -30,8 +29,6 @@ alias la='ls -la'
 
 alias cl='clear'
 alias f='fg'
-
-alias lock='slimlock > /dev/null 2>&1'
 
 alias reload='source ~/.bashrc'
 
