@@ -12,7 +12,7 @@ general {
 }
 
 order += "disk /"
-order += "cpu_temperature 0"
+#order += "cpu_temperature 0"
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "volume master"
