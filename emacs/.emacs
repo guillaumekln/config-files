@@ -76,3 +76,6 @@
 
 ;; Enable powerline
 (powerline-default-theme)
+
+;; Always support shift selection
+(setq org-support-shift-select 'always)
