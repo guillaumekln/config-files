@@ -1,5 +1,8 @@
 (package-initialize)
 
+;; Set home as default directory
+(setq default-directory "~/")
+
 ;; Skip Emacs startup page
 (custom-set-variables '(inhibit-startup-screen t))
 
