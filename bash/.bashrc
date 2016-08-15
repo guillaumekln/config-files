@@ -8,7 +8,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
+PS1='\$ '
 
 # Check the window size after each command
 shopt -s checkwinsize
