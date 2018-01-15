@@ -17,7 +17,7 @@ shopt -s checkwinsize
 export PAGER='most'
 export EDITOR='emacs'
 
-export PATH=$PATH:~/bin:~/.gem/ruby/2.3.0/bin
+export PATH=$PATH:~/bin
 
 # Alias
 alias grep='grep --color=auto'
