@@ -3,7 +3,9 @@
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("melpa" . "http://melpa.org/packages/")))
 (setq package-selected-packages '(auctex
+                                  bazel-mode
                                   cmake-mode
+                                  cuda-mode
                                   dockerfile-mode
                                   json-mode
                                   lua-mode
@@ -42,11 +44,15 @@
 ;; Indentation
 (setq-default indent-tabs-mode nil)
 (setq lua-indent-level 2)
+(setq c-default-style "linux"
+      c-basic-offset 2)
 
 ;; Behavior
 (setq org-support-shift-select 'always)  ; Always support shift selection
 (setq make-backup-files nil)
 (setq auto-save-default nil)
+
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))  ; Treat header files as C++ headers by default
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 (global-set-key (kbd "C-x C-b") 'bs-show)  ; BufferSelection
