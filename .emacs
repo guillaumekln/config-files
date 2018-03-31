@@ -24,18 +24,19 @@
 (custom-set-variables '(inhibit-startup-screen t))  ; Disable startup screen
 (tool-bar-mode -1)
 (menu-bar-mode -99)
-(scroll-bar-mode -1)
 (global-linum-mode 1)
 (column-number-mode 1)
-
-;; Themes
-(load-theme 'zenburn t)
-(powerline-default-theme)
-
-;; Highlighting
-(global-hl-line-mode 1)
 (show-paren-mode 1)
 (setq show-paren-delay 0)
+
+(if (display-graphic-p)
+    (progn
+      (load-theme 'zenburn t)
+      (powerline-default-theme)
+      (global-hl-line-mode 1)
+      (scroll-bar-mode -1))
+  (progn
+    (setq linum-format "%4d \u2502 ")))
 
 (require 'whitespace)
 (setq whitespace-style '(face empty tabs trailing))
