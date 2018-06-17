@@ -11,6 +11,7 @@
                                   lua-mode
                                   magit
                                   markdown-mode
+                                  nginx-mode
                                   powerline
                                   smex
                                   yaml-mode
