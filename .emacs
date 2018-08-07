@@ -5,7 +5,6 @@
 (setq package-selected-packages '(auctex
                                   bazel-mode
                                   cmake-mode
-                                  cuda-mode
                                   dockerfile-mode
                                   json-mode
                                   lua-mode
@@ -55,6 +54,7 @@
 (setq auto-save-default nil)
 
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))  ; Treat header files as C++ headers by default
+(add-to-list 'auto-mode-alist '("\\.cu\\'" . c++-mode))
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 (global-set-key (kbd "C-x C-b") 'bs-show)  ; BufferSelection
