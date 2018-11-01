@@ -36,7 +36,15 @@
       (global-hl-line-mode 1)
       (scroll-bar-mode -1))
   (progn
-    (setq linum-format "%4d \u2502 ")))
+    (setq linum-format "%4d \u2502 ")
+    (custom-set-faces
+     '(magit-diff-added ((((type tty)) (:foreground "green"))))
+     '(magit-diff-added-highlight ((((type tty)) (:foreground "LimeGreen"))))
+     '(magit-diff-context-highlight ((((type tty)) (:foreground "default"))))
+     '(magit-diff-file-heading ((((type tty)) nil)))
+     '(magit-diff-removed ((((type tty)) (:foreground "red"))))
+     '(magit-diff-removed-highlight ((((type tty)) (:foreground "IndianRed"))))
+     '(magit-section-highlight ((((type tty)) nil))))))
 
 (require 'whitespace)
 (setq whitespace-style '(face empty tabs trailing))
