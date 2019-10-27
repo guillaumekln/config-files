@@ -5,15 +5,19 @@
 (setq package-selected-packages '(auctex
                                   bazel-mode
                                   cmake-mode
+                                  company-lsp
                                   dockerfile-mode
+                                  flycheck
                                   json-mode
                                   lua-mode
+                                  lsp-ui
                                   magit
                                   markdown-mode
                                   nginx-mode
                                   powerline
                                   smex
                                   yaml-mode
+                                  yasnippet
                                   zenburn-theme))
 (package-initialize)
 (unless package-archive-contents
@@ -71,3 +75,36 @@
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+(require 'yasnippet)
+
+;; Setup language servers.
+(require 'lsp-mode)
+
+;; C/C++ support:
+;; sudo apt-get install clang-tools-8
+;; sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-8 100
+;; cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
+;; ln -s $PWD/compile_commands.json $PWD/../
+(add-hook 'c++-mode-hook 'lsp)
+(lsp-register-client
+ (make-lsp-client :new-connection (lsp-tramp-connection "clangd")
+                  :major-modes '(c++-mode)
+                  :remote? t
+                  :server-id 'cpp-remote))
+
+;; For Python support: sudo pip install python-language-server
+(add-hook 'python-mode-hook 'lsp)
+(lsp-register-client
+ (make-lsp-client :new-connection (lsp-tramp-connection "pyls")
+                  :major-modes '(python-mode)
+                  :remote? t
+                  :server-id 'pyls-remote))
+
+;; Extra UI configuration for LSP.
+(require 'lsp-ui)
+(add-hook 'lsp-mode-hook 'lsp-ui-mode)
+
+;; Auto-completion with Company.
+(require 'company-lsp)
+(push 'company-lsp company-backends)
