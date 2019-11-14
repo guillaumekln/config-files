@@ -104,6 +104,7 @@
 ;; Extra UI configuration for LSP.
 (require 'lsp-ui)
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+(setq lsp-ui-sideline-enable nil)
 
 ;; Auto-completion with Company.
 (require 'company-lsp)
