@@ -15,6 +15,7 @@
                                   markdown-mode
                                   nginx-mode
                                   powerline
+                                  protobuf-mode
                                   smex
                                   yaml-mode
                                   yasnippet
