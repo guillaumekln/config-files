@@ -1,15 +1,16 @@
 ;; Packages
 (require 'package)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("melpa-stable" . "https://stable.melpa.org/packages/")))
+                         ("melpa-stable" . "https://melpa.org/packages/")))
 (setq package-selected-packages '(auctex
                                   bazel-mode
                                   cmake-mode
-                                  company-lsp
+                                  company
                                   dockerfile-mode
                                   flycheck
                                   json-mode
                                   lua-mode
+                                  lsp-mode
                                   lsp-ui
                                   magit
                                   markdown-mode
@@ -82,6 +83,10 @@
 ;; Setup language servers.
 (require 'lsp-mode)
 
+;; Recommended here https://github.com/emacs-lsp/lsp-mode/blob/master/docs/page/performance.md
+(setq gc-cons-threshold 100000000)
+(setq read-process-output-max (* 1024 1024)) ;; 1mb
+
 ;; C/C++ support:
 ;; sudo apt-get install clang-tools-8
 ;; sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-8 100
@@ -107,6 +112,18 @@
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
 (setq lsp-ui-sideline-enable nil)
 
-;; Auto-completion with Company.
-(require 'company-lsp)
-(push 'company-lsp company-backends)
+;; https://www.emacswiki.org/emacs/TrampMode#toc13
+(defun ido-remove-tramp-from-cache nil
+  "Remove any TRAMP entries from `ido-dir-file-cache'.
+    This stops tramp from trying to connect to remote hosts on emacs startup,
+    which can be very annoying."
+  (interactive)
+  (setq ido-dir-file-cache
+        (cl-remove-if
+         (lambda (x)
+           (string-match "/\\(rsh\\|ssh\\|telnet\\|su\\|sudo\\|sshx\\|krlogin\\|ksu\\|rcp\\|scp\\|rsync\\|scpx\\|fcp\\|nc\\|ftp\\|smb\\|adb\\):" (car x)))
+         ido-dir-file-cache)))
+;; redefine `ido-kill-emacs-hook' so that cache is cleaned before being saved
+(defun ido-kill-emacs-hook ()
+  (ido-remove-tramp-from-cache)
+  (ido-save-history))
