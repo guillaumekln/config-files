@@ -87,6 +87,9 @@
 (setq gc-cons-threshold 100000000)
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
 
+;; Disable auto-formatting from lsp-mode
+(setq lsp-enable-on-type-formatting nil)
+
 ;; C/C++ support:
 ;; sudo apt-get install clang-tools-8
 ;; sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-8 100
