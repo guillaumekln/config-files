@@ -38,5 +38,5 @@ URxvt.foreground: white
 URxvt.scrollBar: False
 URxvt.iso14755: False
 
-URxvt.urlLauncher: chromium
+URxvt.urlLauncher: firefox
 URxvt.matcher.button: 1
