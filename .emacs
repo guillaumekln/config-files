@@ -69,6 +69,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))  ; Treat header files as C++ headers by default
 (add-to-list 'auto-mode-alist '("\\.cu\\'" . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.cuh\\'" . c++-mode))
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 (global-set-key (kbd "C-x C-b") 'bs-show)  ; BufferSelection
