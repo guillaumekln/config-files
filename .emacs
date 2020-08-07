@@ -89,6 +89,7 @@
 
 ;; Disable auto-formatting from lsp-mode
 (setq lsp-enable-on-type-formatting nil)
+(setq lsp-enable-indentation nil)
 
 ;; C/C++ support:
 ;; sudo apt-get install clang-tools-8
