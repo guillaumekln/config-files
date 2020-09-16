@@ -67,6 +67,9 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
+(global-auto-revert-mode t)
+(setq auto-revert-remote-files t)
+
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))  ; Treat header files as C++ headers by default
 (add-to-list 'auto-mode-alist '("\\.cu\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.cuh\\'" . c++-mode))
