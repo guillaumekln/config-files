@@ -19,7 +19,6 @@
                                   protobuf-mode
                                   smex
                                   yaml-mode
-                                  yasnippet
                                   zenburn-theme))
 (package-initialize)
 (unless package-archive-contents
@@ -82,8 +81,6 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-(require 'yasnippet)
-
 ;; Setup language servers.
 (require 'lsp-mode)
 
@@ -94,6 +91,7 @@
 ;; Disable auto-formatting from lsp-mode
 (setq lsp-enable-on-type-formatting nil)
 (setq lsp-enable-indentation nil)
+(setq lsp-enable-snippet nil)
 
 ;; C/C++ support:
 ;; sudo apt-get install clang-tools-8
