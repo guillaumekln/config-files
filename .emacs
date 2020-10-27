@@ -1,7 +1,7 @@
 ;; Packages
 (require 'package)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("melpa-stable" . "https://melpa.org/packages/")))
+                         ("melpa" . "https://melpa.org/packages/")))
 (setq package-selected-packages '(auctex
                                   bazel-mode
                                   cmake-mode
