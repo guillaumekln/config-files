@@ -34,22 +34,23 @@
 (show-paren-mode 1)
 (setq show-paren-delay 0)
 
+;; Function to set a nicer buffer line separator in terminal mode.
+(defun my-change-window-divider ()
+  (let ((display-table (or buffer-display-table standard-display-table)))
+    (set-display-table-slot display-table 5 ?│)
+    (set-window-display-table (selected-window) display-table)))
+
+(load-theme 'zenburn t)
 (if (display-graphic-p)
     (progn
-      (load-theme 'zenburn t)
-      (powerline-default-theme)
       (global-hl-line-mode 1)
-      (scroll-bar-mode -1))
+      (powerline-default-theme)
+      (scroll-bar-mode -1)
+      )
   (progn
-    (setq linum-format "%4d \u2502 ")
-    (custom-set-faces
-     '(magit-diff-added ((((type tty)) (:foreground "green"))))
-     '(magit-diff-added-highlight ((((type tty)) (:foreground "LimeGreen"))))
-     '(magit-diff-context-highlight ((((type tty)) (:foreground "default"))))
-     '(magit-diff-file-heading ((((type tty)) nil)))
-     '(magit-diff-removed ((((type tty)) (:foreground "red"))))
-     '(magit-diff-removed-highlight ((((type tty)) (:foreground "IndianRed"))))
-     '(magit-section-highlight ((((type tty)) nil))))))
+    (setq linum-format "%4d │ ")
+    (add-hook 'window-configuration-change-hook 'my-change-window-divider)
+    ))
 
 (require 'whitespace)
 (setq whitespace-style '(face empty tabs trailing))
