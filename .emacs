@@ -1,3 +1,6 @@
+;; Default window size
+(when window-system (set-frame-size (selected-frame) 100 50))
+
 ;; Packages
 (require 'package)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
